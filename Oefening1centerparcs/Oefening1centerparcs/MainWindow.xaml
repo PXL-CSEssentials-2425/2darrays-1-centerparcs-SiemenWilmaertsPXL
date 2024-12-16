@@ -1,0 +1,27 @@
+﻿<Window x:Class="Oefening1centerparcs.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Oefening1centerparcs"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Background="LightGreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <WrapPanel Orientation="Vertical" Grid.Column="1" Background="White">
+            <Label Content="CenterParcs" Foreground="Green" HorizontalAlignment="Center"  FontSize="40"  />
+            <Label Content="Type Woning" FontSize="16"/>
+            <ComboBox Name="typeWoningComboBox" SelectionChanged="typeWoning_SelectionChanged">
+            </ComboBox>
+            <Label Content="Aantal dagen" FontSize="16"/>
+            <ComboBox Name="amountDaysComboBox" SelectionChanged="amountDaysComboBox_SelectionChanged">
+            </ComboBox>
+            <Label Content="Prijs" FontSize="16"/>
+            <TextBox IsEnabled="False" Name="prijsTextBox"></TextBox>
+        </WrapPanel>
+    </Grid>
+</Window>
